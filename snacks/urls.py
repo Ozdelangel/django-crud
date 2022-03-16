@@ -7,8 +7,8 @@ urlpatterns = [
     path('', SnackListView.as_view(), name='List_view'),
     path('<int:pk>', SnackDetailView.as_view(), name='snack_detail'),
     path('new/', SnackCreateView.as_view(), name='snack_create'),
-    path('', SnackUpdateView.as_view(), name='update_view'),
-    path('', SnackDeleteView.as_view(), name='delete_view')
+    path('<int:pk>/edit', SnackUpdateView.as_view(), name='snack_update'),
+    path('<int:pk>/delete', SnackDeleteView.as_view(), name='snack_delete')
     
 
 ]
